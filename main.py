@@ -28,11 +28,6 @@ app.add_middleware(
 )
 
 
-@app.get("")
-def root():
-    return "Hello World!"
-
-
 models.Base.metadata.create_all(engine)
 
 app.mount('/images', StaticFiles(directory='images'), name='images')
